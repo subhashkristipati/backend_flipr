@@ -22,7 +22,7 @@ app.use(cors())
 
 const dbURI = 'mongodb+srv://flipr:flipr%40hackathon@cluster0.dkyw7jy.mongodb.net/?retryWrites=true&w=majority'
 
-const port = process.env.PORT || 9999
+const port = process.env.PORT || 3001
 mongoose.connect(dbURI, { useNewUrlParser: true })
         .then(app.listen(port, (err) => {
                 console.log(`http://localhost:${port}/`)
