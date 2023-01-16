@@ -4,11 +4,14 @@ const bodyParser = require('body-parser')
 const bcryptjs = require('bcryptjs')
 const cors = require('cors')
 
+
 const Company = require('./models/Company')
 const Stock = require('./models/Stock')
 const User = require('./models/User')
 
 const app = express()
+
+require("dotenv").config();
 
 
 // middleware
@@ -18,7 +21,6 @@ app.use(bodyParser.json())
 app.use(cors())
 
 const dbURI = 'mongodb+srv://flipr:flipr%40hackathon@cluster0.dkyw7jy.mongodb.net/?retryWrites=true&w=majority'
-
 
 const port = process.env.PORT || 9999
 mongoose.connect(dbURI, { useNewUrlParser: true })
